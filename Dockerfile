@@ -13,6 +13,7 @@ RUN apt-get install -y git-core
 RUN apt-get install -y python-pip
 RUN apt-get install -y python-dev
 RUN apt-get install -y mc
+RUN apt-get install -y nano
 
 RUN git clone https://github.com/torch/distro.git torch --recursive
 
