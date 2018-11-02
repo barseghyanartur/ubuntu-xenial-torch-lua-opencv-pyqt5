@@ -25,16 +25,14 @@ RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER docker
 
 RUN cd torch && sudo bash ./install-deps && sudo bash ./install.sh
-
 RUN pip install opencv-python
 RUN pip install imutils
 
 RUN echo source /torch/install/bin/torch-activate >> /home/docker/.bashrc
 RUN bash -c "source /home/docker/.bashrc"
-#RUN cat /home/docker/.bashrc
-#RUN bash -c 'compgen -ac'
 RUN sudo /torch/install/bin/luarocks install torch
 RUN sudo /torch/install/bin/luarocks install nn
 RUN sudo /torch/install/bin/luarocks install dpnn
 RUN sudo /torch/install/bin/luarocks install torchx
+RUN sudo chmod 777 -R torch
 #RUN sudo torch/install/bin/th>dpnn.test()
