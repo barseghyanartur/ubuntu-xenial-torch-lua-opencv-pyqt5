@@ -24,13 +24,16 @@ RUN adduser docker sudo
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER docker
 
-RUN cd torch && sudo bash ./install-deps && sudo bash ./install.sh
+RUN sudo ln -snf /bin/bash /bin/sh
+RUN cd torch && sudo bash ./install-deps && sudo bash ./install.sh -b
 RUN pip install opencv-python
 RUN pip install imutils
 
 RUN echo 'source /torch/install/bin/torch-activate' >> /home/docker/.bashrc
 RUN echo 'PATH="$PATH:/torch/install/bin"' >> /home/docker/.bashrc
-RUN bash -c "source /home/docker/.bashrc"
+
+RUN source /home/docker/.bashrc
+
 RUN sudo /torch/install/bin/luarocks install torch
 RUN sudo /torch/install/bin/luarocks install nn
 RUN sudo /torch/install/bin/luarocks install dpnn
