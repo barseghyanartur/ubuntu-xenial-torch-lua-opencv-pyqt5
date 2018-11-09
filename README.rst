@@ -1,7 +1,7 @@
 ====================================
 ubuntu-xenial-torch-lua-opencv-pyqt5
 ====================================
-Ubuntu Xenial with Torth, Lua, OpenCV, PyQT5 and other useful things installed.
+Ubuntu Xenial with Torch, Lua, OpenCV, PyQT5 and other useful things installed.
 
 Build
 =====
