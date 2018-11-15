@@ -30,7 +30,7 @@ Build/update
 
     docker tag 9604b98a983a barseghyanartur/ubuntu-xenial-torch-lua-opencv-pyqt5:7
 
-Note, that in `barseghyanartur/ubuntu-xenial-torch-lua-opencv-pyqt5/:7` - `7`
+Note, that in `barseghyanartur/ubuntu-xenial-torch-lua-opencv-pyqt5:7` - `7`
 stands for tag name/version.
 
 **Push new docker image**
