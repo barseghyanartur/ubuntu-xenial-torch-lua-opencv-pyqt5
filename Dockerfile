@@ -15,6 +15,7 @@ RUN apt-get install -y python-dev
 RUN apt-get install -y python-imaging-tk
 RUN apt-get install -y mc
 RUN apt-get install -y nano
+RUN apt-get install -y wget
 
 RUN git clone https://github.com/torch/distro.git torch --recursive
 
