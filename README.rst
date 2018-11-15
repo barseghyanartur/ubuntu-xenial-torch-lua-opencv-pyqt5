@@ -20,9 +20,9 @@ Build/update
 
 .. code-block:: text
 
-    REPOSITORY                                      TAG                 IMAGE ID            CREATED             SIZE
-    <none>                                          <none>              9604b98a983a        37 minutes ago      2.01 GB
-    <none>                                          <none>              054ca1c9b3a6        41 minutes ago      2 GB
+    REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE
+    <none>                     <none>              9604b98a983a        37 minutes ago      2.01 GB
+    <none>                     <none>              054ca1c9b3a6        41 minutes ago      2 GB
 
 **Tag new docker image**
 
