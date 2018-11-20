@@ -17,6 +17,8 @@ RUN apt-get install -y mc
 RUN apt-get install -y nano
 RUN apt-get install -y wget
 
+RUN pip install pip --upgrade
+RUN pip install virtualenv
 RUN git clone https://github.com/torch/distro.git torch --recursive
 
 RUN apt-get install -y sudo
@@ -27,8 +29,8 @@ USER docker
 
 RUN sudo ln -snf /bin/bash /bin/sh
 RUN cd torch && sudo bash ./install-deps && sudo bash ./install.sh -b
-RUN pip install opencv-python
-RUN pip install imutils
+RUN pip install opencv-python --user
+RUN pip install imutils --user
 
 RUN echo 'source /torch/install/bin/torch-activate' >> /home/docker/.bashrc
 RUN echo 'PATH="$PATH:/torch/install/bin"' >> /home/docker/.bashrc
